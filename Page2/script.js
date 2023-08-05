@@ -51,6 +51,7 @@ async function getIpData(){
         postOffices =  posts[0].PostOffice;
         getOffices(postOffices);
     }catch(error){
+        alert("Some Error Occured!");
         console.log("An Error Occured : ",error);
     }
 

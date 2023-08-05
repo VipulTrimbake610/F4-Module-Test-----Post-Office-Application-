@@ -7,6 +7,7 @@ async function ipAddress(){
             let ipspan = document.getElementById('ipSpan');
             ipspan.innerText = ip;
     }catch(error){
+        alert("Some Error Occured!");
         console.log("An Error Occured : ",error);
     }
 }
@@ -22,6 +23,7 @@ async function IPData(){
         localStorage.setItem('ipData',JSON.stringify(ipData))
         location.href = './Page2/index.html'
     }catch(error){
+        alert("Some Error Occured!");
         console.log("An Error Occured : ",error);
     }
 }
