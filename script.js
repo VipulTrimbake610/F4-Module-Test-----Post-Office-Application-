@@ -14,11 +14,16 @@ async function ipAddress(){
 ipAddress();
 
 async function IPData(){
-    let ip = localStorage.getItem('ip');
-    let response = await fetch(`https://ipinfo.io/${ip}?token=233ab3f971fbd1`);
-    let ipData = await response.json();
-    localStorage.setItem('ipData',JSON.stringify(ipData))
-    location.href = './Page2/index.html'
+    try{
+
+        let ip = localStorage.getItem('ip');
+        let response = await fetch(`https://ipinfo.io/${ip}?token=233ab3f971fbd1`);
+        let ipData = await response.json();
+        localStorage.setItem('ipData',JSON.stringify(ipData))
+        location.href = './Page2/index.html'
+    }catch(error){
+        console.log("An Error Occured : ",error);
+    }
 }
 
 const started = document.getElementById('btnGetStarted');

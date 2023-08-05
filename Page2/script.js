@@ -24,15 +24,18 @@ async function getIpData(){
     try{
        
         let ipData = JSON.parse(localStorage.getItem('ipData')); 
-
         let a = ipData.loc.split(","); 
         ipadd.innerText = ipData.ip;
         lat.innerText = a[0];
         long.innerText = a[1];
         city.innerText = ipData.city;
         region.innerText = ipData.region;
-        org.innerText = ipData.org;    
-        hostname.innerText = ipData.hostname;     
+        org.innerText = ipData.org;  
+        if(ipData.hostname == undefined){
+            hostname.innerText = 'Not Available';
+        }else{
+            hostname.innerText = ipData.hostname;     
+        }
         myFrame.src = `https://maps.google.com/maps?q=${ipData.loc}&z=15&output=embed`
         
         let datetime = new Date().toLocaleString("en-US", { timeZone: ipData.timeZone });
