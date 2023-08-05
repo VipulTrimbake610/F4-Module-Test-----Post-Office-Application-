@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Office Application Page 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Mulish:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="ip">IP Address : <span id="ipAdd"></span></div>
+        <div class="hdata">
+            <div>Lat: <span id="lat">dssdd</span><br>Long: <span id="long">sdsdd</span></div>
+            <div>City: <span id="city"></span><br>Region: <span id="region"></span></div>
+            <div>Organization: <span id="org"></span><br>Hostname : <span id="host"></span></div>
+        </div>
+    </header>
+    <main>
+        <section class="s1">
+            <h1>Your Curent Location</h1>
+            <iframe src="" id="myFrame"></iframe>
+        </section>
+        <section class="s2">
+            <h1>More Information About You</h1>
+            <div class="tz">Time Zone : <span id="timezone">djsd</span></div>
+            <div class="dt">Date and Time : <span id="date">ssdsd</span></div>
+            <div class="pin">Pincode : <span id="pin">dssd</span></div>
+            <div class="msg">Message : <span id="msg">sdds</span></div>
+        </section>
+        <section class="s3">
+            <h1>Post Offices Near You</h1>
+            <input type="search" id="iSearch" placeholder="Search by Name or by Branch">
+            <div class="offices" id="offices">
+                <!-- <div class="office">
+                    <div>Name</div>
+                    <div>Branch Type</div>
+                    <div>Delivery Status</div>
+                    <div>District </div>
+                    <div>Division : </div>
+                </div> -->
+               
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
